@@ -6,9 +6,9 @@
 	<classpathentry kind="lib" path="resources/jgoodies-common-1.8.0.jar"/>
 	<classpathentry kind="lib" path="resources/jgoodies-forms-1.8.0-sources.jar"/>
 	<classpathentry kind="lib" path="resources/jgoodies-forms-1.8.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dell/workspace/DDSistemas/mysql-connector-java-5.1.38-bin.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dell/workspace/DDSistemas/google-maps-services-0.1.12.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dell/workspace/DDSistemas/google-maps-services-0.1.12-javadoc.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dell/workspace/DDSistemas/google-maps-services-0.1.12-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/dell/git/Ingenieria_Naval/DDSistemas/google-maps-services-0.1.12.jar"/>
+	<classpathentry kind="lib" path="C:/Users/dell/git/Ingenieria_Naval/DDSistemas/google-maps-services-0.1.12-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/dell/git/Ingenieria_Naval/DDSistemas/google-maps-services-0.1.12-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/dell/git/Ingenieria_Naval/DDSistemas/mysql-connector-java-5.1.38-bin.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

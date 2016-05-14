@@ -10,6 +10,7 @@ public class HelloWorld
 	private GeoApiContext context = new GeoApiContext().setApiKey("AIzaSyBE5rzF-waR_NU3930wAfnML3BtdENltMs");
     public static void main(String[] ar) throws Exception 
     {
+    	/*
     	// Replace the API key below with a valid API key.
         DistanceMatrixApi.newRequest(context)
         .origins(new LatLng(-31.9522, 115.8589),
@@ -17,7 +18,7 @@ public class HelloWorld
         .destinations(new LatLng(-25.344677, 131.036692),
             new LatLng(-13.092297, 132.394057))
         .awaitIgnoreError();
-
+		*/
     	
     	MyDataAccess conexion = new MyDataAccess();
     	ResultSet resultado;
