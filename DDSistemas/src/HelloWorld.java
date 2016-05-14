@@ -2,29 +2,41 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 
+import com.google.*;
 import com.google.maps.*;
-
-
+import com.google.maps.model.GeocodingResult;
+import com.google.maps.model.LatLng;
+import com.squareup.okhttp.*;
+import okio.*;
+import com.google.gson.*;
+import com.google.maps.internal.ApiConfig;
+import com.google.maps.errors.ApiException;
+import com.google.maps.internal.ApiResponse;
+import com.google.maps.model.GeocodingResult;
+import com.google.maps.model.LatLng;
+import org.joda.time.*;
 public class HelloWorld
 {
-	private GeoApiContext context = new GeoApiContext().setApiKey("AIzaSyBE5rzF-waR_NU3930wAfnML3BtdENltMs");
-    public static void main(String[] ar) throws Exception 
+	public static void main(String[] ar) throws Exception 
     {
-    	/*
+		GeoApiContext context = new GeoApiContext().setApiKey("AIzaSyBE5rzF-waR_NU3930wAfnML3BtdENltMs");
     	// Replace the API key below with a valid API key.
+		GeocodingResult[] results =  GeocodingApi.geocode(context,"1600 Amphitheatre Parkway Mountain View, CA 94043").await();
+			System.out.println(results[0].formattedAddress);
+		
         DistanceMatrixApi.newRequest(context)
         .origins(new LatLng(-31.9522, 115.8589),
             new LatLng(-37.8136, 144.9631))
         .destinations(new LatLng(-25.344677, 131.036692),
             new LatLng(-13.092297, 132.394057))
         .awaitIgnoreError();
-		*/
-    	
+		
+    	/*
     	MyDataAccess conexion = new MyDataAccess();
     	ResultSet resultado;
     	String campo;
     	
-    	conexion.setQuery("insert into prueba values('jeje')");
+    	//conexion.setQuery("insert into prueba values('jeje')");
     	resultado = conexion.getQuery("select * from prueba");
     	
     	
@@ -37,7 +49,7 @@ public class HelloWorld
           // TODO Auto-generated catch block
           e.printStackTrace();
         }  
-        
+        */
         /*
         // Punto de Interes 1
         ParadaColectivo parada1 = new ParadaColectivo();
