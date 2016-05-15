@@ -1,9 +1,10 @@
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
+import java.util.Map;
 
 import com.google.*;
 import com.google.maps.*;
+import com.google.maps.model.DistanceMatrix;
 import com.google.maps.model.GeocodingResult;
 import com.google.maps.model.LatLng;
 import com.squareup.okhttp.*;
@@ -15,12 +16,16 @@ import com.google.maps.internal.ApiResponse;
 import com.google.maps.model.GeocodingResult;
 import com.google.maps.model.LatLng;
 import org.joda.time.*;
+import com.json.*;
+import com.json.parsers.JSONParser;
+import com.json.parsers.JsonParserFactory;
 public class HelloWorld
 {
 	public static void main(String[] ar) throws Exception 
     {
 		GeoApiContext context = new GeoApiContext().setApiKey("AIzaSyBE5rzF-waR_NU3930wAfnML3BtdENltMs");
     	// Replace the API key below with a valid API key.
+		/*
 		GeocodingResult[] results =  GeocodingApi.geocode(context,"1600 Amphitheatre Parkway Mountain View, CA 94043").await();
 			System.out.println(results[0].formattedAddress);
 		
@@ -30,8 +35,20 @@ public class HelloWorld
         .destinations(new LatLng(-25.344677, 131.036692),
             new LatLng(-13.092297, 132.394057))
         .awaitIgnoreError();
-		
-    	/*
+		*/
+        String[] origins = new String[]{
+                "Cordoba, Argentina", "Buenos Aires, Argentina", "Santa Fe, Argentina",
+                
+            };
+            String[] destinations = new String[]{
+                "Formosa, Argentina", "Santa Cruz, Argentina", "Entre Rios, Argentina",
+            };
+            DistanceMatrix matrix =
+                DistanceMatrixApi.getDistanceMatrix(context, origins, destinations).await();
+
+        String distancia = matrix.rows[0].elements[0].toString();
+        System.out.println(distancia);
+        /*
     	MyDataAccess conexion = new MyDataAccess();
     	ResultSet resultado;
     	String campo;
